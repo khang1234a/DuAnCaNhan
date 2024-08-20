@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #222222;
+}
+.card{
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all .8s ease;
+}
+.card:hover{
+    transform: translateY(-15px);
+    box-shadow: 1px 1px 20px #fff;
+}
+.card_img{
+    width: 100%;
+    height: 100%;
+}
+.card_img>img{
+    width: 100%;
+    height: 100%;
+}
+.card-icon{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+}
+.card-icon-items{
+    color: white;
+    color: #222222;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .8s ease;
+}
+@keyframes vo {
+    from{
+        opacity: 0;
+       transform: translateX(100px);
+    }to{
+        opacity: 1;
+       transform: translateX(0);
+    }
+}
+@keyframes ra {
+    from{
+       transform: translateX(0px);
+    }to{
+       transform: translateX(100px);
+    }
+}
+.card:hover .eye{
+    animation: vo .8s ease ;
+}
+.card:hover .heart{
+    animation: vo 1.4s ease ;
+}
+.card:hover .rotate{
+    animation: vo 1.8s ease ;
+}
+.card:not(:hover) .eye{
+    animation: ra .8s ease  forwards;
+}
+.card:not(:hover) .heart{
+    animation: ra 1.4s ease forwards;
+}
+.card:not(:hover) .rotate{
+    animation: ra 1.8s ease forwards;
+}
+.card-icon-items:hover{
+    background-color: red;
+    color: white;
+}
